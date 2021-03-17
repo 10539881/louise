@@ -25,9 +25,15 @@ def add():
 
   return '{"Result":"Success"}'
 
-@app.route("/delete") #Add Student
+@app.route("/delete") #delete Student
 def delete():
-	  return '{"Result":"Not yet done"}'
+	id2 = request.args.get('id')
+	cur = mysql.connection.cursor()
+	s='delete from students where id = ?'
+	cur.execute(s,id2)
+	mysql.connection.commit()
+
+	return '{"Result":"Not yet donevxcvxc"}'
 
 @app.route("/") #Default - Show Data
 def hello(): # Name of the method
