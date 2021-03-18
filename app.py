@@ -41,7 +41,7 @@ def delete():
 def update():
 	id3 = request.args.get('id')
     cur = mysql.connection.cursor()
-    $s = "update name set name='mary' WHERE studentid = '%s' % id3
+    s = "update name set name='mary' WHERE studentid = '%s' % id3
 
 	cur.execute(s)
 	mysql.connection.commit()
