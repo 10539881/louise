@@ -37,6 +37,11 @@ def delete():
 
 	return '{"Result":"Delete Successful"}'
 
+@app.route("/update") #update Student
+def update():
+	
+	return '{"Result":"Update not complete"}'
+
 @app.route("/") #Default - Show Data
 def hello(): # Name of the method
   cur = mysql.connection.cursor() #create a connection to the SQL instance
