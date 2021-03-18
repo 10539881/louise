@@ -41,11 +41,9 @@ def delete():
 def update():
 	id3 = request.args.get('id')
     cur = mysql.connection.cursor()
-    s = "update name set name='mary' WHERE studentid = '%s'" % id3
-
+    s = "update students set name='mary' WHERE studentid = '%s'" % id3
 	cur.execute(s)
-	mysql.connection.commit()
-    
+	mysql.connection.commit()  
 	return '{"Result":"Update not complete"}'
 
 @app.route("/") #Default - Show Data
