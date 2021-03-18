@@ -39,16 +39,13 @@ def delete():
 
 @app.route("/update") #update Student
 def update():
-	id = request.args.get('id')
-<<<<<<< Updated upstream
-=======
+	id3 = request.args.get('id')
     cur = mysql.connection.cursor()
-    $s = "update name SET name='mary' WHERE studentid = '%s' % id2
+    $s = "update name set name='mary' WHERE studentid = '%s' % id3
 
-	#sql = "delete from students where studentID = '%d'" % (id2)
 	cur.execute(s)
 	mysql.connection.commit()
->>>>>>> Stashed changes
+    
 	return '{"Result":"Update not complete"}'
 
 @app.route("/") #Default - Show Data
