@@ -42,7 +42,7 @@ def update():
   id3 = request.args.get('id')
   name3 = request.args.get('name')
   cur = mysql.connection.cursor()
-  s = "update students set studentName = '%s' where studentID = '%s'" %name3 %id3
+  s = "update students set studentName = '%s' where studentID = '%s'" %(name3, id3)
   cur.execute(s)
   mysql.connection.commit()
 
