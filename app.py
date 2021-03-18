@@ -39,7 +39,7 @@ def delete():
 
 @app.route("/update") #update Student
 def update():
-	
+	id = request.args.get('id')
 	return '{"Result":"Update not complete"}'
 
 @app.route("/") #Default - Show Data
