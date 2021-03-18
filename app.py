@@ -27,7 +27,7 @@ def add():
 
 @app.route("/delete") #delete Student
 def delete():
-	id2 = request.args.get('id')
+    id2 = request.args.get('id')
 	cur = mysql.connection.cursor()
 	s = "delete from students where studentID = '%s'" % id2
 
@@ -37,15 +37,15 @@ def delete():
 
 	return '{"Result":"Delete Successful"}'
 
-@app.route("/update") #delete Student
-def update():
-	id3 = request.args.get('id')
-	cur = mysql.connection.cursor()
-	s = "update students set studentName = 'mary' where studentID = '%s'" % id3
-    cur.execute(s)
-	mysql.connection.commit()
+#@app.route("/update") #delete Student
+#def update():
+#	id3 = request.args.get('id')
+#	cur = mysql.connection.cursor()
+#	s = "update students set studentName = 'mary' where studentID = '%s'" % id3
+#   cur.execute(s)
+#	mysql.connection.commit()
 
-	return '{"Result":"Delete Successful"}'
+#	return '{"Result":"Delete Successful"}'
 
 
 
